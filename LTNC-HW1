@@ -130,4 +130,37 @@ int main()
 
 Bai 8
 
+#include <bits/stdc++.h>
 
+using namespace std;
+
+#define int long long
+
+bool check(int a[], int n){
+    int sum = 0;
+    for(int m = 0; m <= n - 1; m++){
+        sum += a[m];
+    }
+    int sum1 = 0;
+    for(int i = 0; i <= n - 1; i++){
+        sum1 += a[i];
+        if(2 * (sum1 - a[i]) == sum - a[i]) return true;
+    }
+    return false;
+}
+int32_t main()
+{
+    int t;
+    cin >> t;
+    
+    for(int n = 0 ; n < t; n++){
+        int x; cin >> x;
+        int a[x];
+        for(int m = 0; m < x; m++){
+            cin >> a[m];
+        }
+        if(check(a, x)){cout << "YES" << endl;}
+        else cout << "NO" << endl;
+    }
+    return 0;
+}
