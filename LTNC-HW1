@@ -1,1 +1,133 @@
-ok
+//Bai 1
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!";
+    return 0;
+}
+
+//Bai 2
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int a,b ,c;
+    cin >> a >> b >> c;
+    
+    cout << a + b + c; 
+    return 0;
+}
+
+
+//Bai 3
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    // Complete the code.
+    
+    for(int i = 0; i < 5; i++){
+        string s; cin >> s;
+        cout << s << endl;
+    }
+    return 0;
+}
+
+Bai 4
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n; cin >> n;
+    if(n == 1) cout << "one";
+    if(n == 2) cout << "two";
+    if(n == 3) cout << "three";
+    if(n == 4) cout << "four";
+    if(n == 5) cout << "five";
+    if(n == 6) cout << "six";
+    if(n == 7) cout << "seven";
+    if(n == 8) cout << "eight";
+    if(n == 9) cout << "nine";
+    if(n > 9) cout << "Greater than 9";
+} 
+
+Bai 5
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void cot(int a, int b, int c, int d);
+
+int main() {
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    cot(a, b, c , d);
+    return 0;
+}
+void cot(int a, int b, int c, int d){
+    cout << max(a, max(b, max(c, d)));
+}
+
+Bai 6
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n; cin >> n;
+    int a[n];
+    for(int i = 0; i < n ; i++){
+        cin >> a[i];
+    }
+    for(int i = n - 1; i >= 0; i--){
+        cout << a[i] << ' ';
+    }
+    
+    return 0;
+}
+
+
+Bai 7
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n; cin >> n;
+    int a[n];
+    double positive, negative, zero;
+    for(int i = 0; i < n; i++){
+        cin >> a[i];
+        if(a[i] > 0) positive++;
+        else if(a[i] < 0) negative++;
+        else zero++;
+    }
+    cout << fixed << setprecision(6) 
+    << positive / n << endl 
+    << negative / n << endl 
+    << zero / n;
+    
+    return 0;
+}
+
+Bai 8
+
+
