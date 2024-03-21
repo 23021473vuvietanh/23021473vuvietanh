@@ -1,1 +1,84 @@
+Bai 1
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int cnt(int x){
+    int cntt = 0;
+    int n = x;
+    while(x){
+        int dv = x % 10;
+        if(dv != 0 && n % dv == 0) cntt++;
+        x /= 10;
+    }
+    return cntt;
+}
+
+int32_t main()
+{
+    int n; cin >> n;
+    for(int i = 0; i < n; i++){
+        int x;
+        cin >> x;
+        cout << cnt(x) << endl;
+    }
+    return 0;
+}
+
+
+Bai 2
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define int long long
+
+bool check(int x1, int v1, int x2, int v2)
+{
+    if(v1 == v2 && x1 != x2) return false;
+    if((x2 - x1) / (v1 - v2) > 0 && (x2 - x1) % (v1 - v2) == 0) return true;
+    else return false;
+}
+
+int32_t main()
+{
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    if(check(a, b, c , d)) cout << "YES";
+    else cout << "NO";
+
+    return 0;
+}
+
+Bai 3
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define int long long
+
+
+int32_t main()
+{
+    int n, k; cin >> n >> k;
+    int a[n];
+
+    for(int i = 0; i < n ; i++){
+        cin >> a[i];
+    }
+    int cnt = 0;
+
+    for(int i = 0 ; i < n - 1; i++){
+        for(int j = i + 1; j < n; j++){
+            if((a[i] + a[j]) % k == 0) cnt++;
+        }
+    }
+
+    cout << cnt;
+
+    return 0;
+}
 
