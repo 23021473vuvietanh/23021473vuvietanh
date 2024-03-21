@@ -1,0 +1,137 @@
+Bai 1
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	// Complete the program
+    
+    string a, b;
+    cin >> a >> b;
+    cout << a.size() << ' ' << b.size() << endl;
+    cout << a << b << endl;
+    swap(a[0], b[0]);
+    cout << a << ' ' << b;
+  
+    return 0;
+}
+
+Bai 2
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n; cin >> n;
+    
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= n - i; j++) cout << ' ';
+        for(int k = 1; k <= i; k++) cout << "#";
+        
+        cout << endl;
+    }
+    
+    return 0;
+}
+
+Bai 3
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string s; cin >> s;
+
+    if(s[8] == 'P'){
+        if(s[0] == '1' && s[1] == '2'){
+            for(int i = 0; i < 8; i++){
+                cout << s[i];
+            }
+            return 0;
+        }
+        if(s[0] == '0') s[0] = '1';
+        else s[0] = '2';
+        int x = s[1] - '0';
+        x += 2;
+        s[1] = char(x) + '0';
+        for(int i = 0; i < 8; i++){
+                cout << s[i];
+            }
+    }
+    else
+    {
+        if(s[0] == '1' && s[1] == '2'){
+            s[0] = s[1] = '0';
+            for(int i = 0; i < 8; i++){
+                cout << s[i];
+            }
+            return 0;
+        }
+        else{
+            for(int i = 0; i < 8; i++){
+                cout << s[i];
+            }
+        }
+    }
+}
+
+
+Bai 4
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string s; cin >> s;
+    
+    int k = s.size();
+    int cnt = 0;
+    
+    for(int i = 0; i < k; i++){
+        if(isupper(s[i])) cnt++;
+    }
+    
+    cout << cnt + 1;
+}
+Bai 5
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int t; cin >> t;
+    for(int m = 0; m < t; m++){
+        string s; cin >> s;
+    
+        string res = "hackerrank";
+        
+        int cnt = 0;
+        int n = 0;       
+        for(int i = 0; i < res.size(); i++){
+            char x = res[i];
+            for(int j = n; j < s.size(); j++){
+                if(s[j] == x){
+                    cnt++;
+                    n = j + 1;
+                    break;
+                }
+                else continue;
+            }
+        }
+        
+        if(cnt == res.size()) cout << "YES" << endl;
+        else cout << "NO" << endl;
+    }
+    
+}
+
+
+Bai 6
+
