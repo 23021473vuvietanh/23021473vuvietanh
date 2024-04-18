@@ -33,3 +33,52 @@ int main()
 }
 
 Bai 2
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+set <string> se;
+
+void sinh(string s)
+{
+    if(s.size() <= 3){
+        se.insert(s);
+    }
+    else return;
+
+    sinh("a" + s);
+
+    sinh(s + "a");
+
+    sinh("b" + s);
+
+    sinh(s + "b");
+
+    sinh("c" + s);
+
+    sinh(s + "c");
+
+    sinh("d" + s);
+
+    sinh(s + "d");
+}
+
+int main()
+{
+    string s = "";
+
+    sinh(s);
+
+    for(auto x : se){
+        if(x.size() == 3){
+            cout << x << endl;
+        }
+    }
+
+    return 0;
+}
+
+Bai 3
+
+
