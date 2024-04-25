@@ -34,6 +34,8 @@ int main()
 
 Bai 2
 
+Cach 1
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -79,6 +81,37 @@ int main()
     return 0;
 }
 
+Cach 2;
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void sinh(string s)
+{
+    if(s.size() == 3)
+    {
+        cout << s << endl;
+        return;
+    }
+    for(char i = 'a'; i <= 'd'; i++)
+    {
+        s.push_back(i);
+        sinh(s);
+        s.pop_back();
+    }
+}
+
+int main()
+{
+    string res = "";
+    sinh(res);
+
+    return 0;
+}
+
+
 Bai 3
+
 
 
